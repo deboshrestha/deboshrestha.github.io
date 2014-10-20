@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="box">
+        <div class="header">
+          <h4>Book your Bus here</h4>
+        </div>
+        <form action="LoginServlet" method="post">
+          <h6>From</h6>
+          <input type="text" name="from" placeholder="Majestic" required="required">
+          <h6>To</h6>
+          <input type="text" name="to" placeholder="Banashankari" required="required">
+		  
+          <input type="checkbox" name="right_time" value="Right_time" id="chid" onclick="validate()"><label>Right Now</label>
+		  <br/>		  
+		  <div id="id1"><h6>Start Time</h6>
+		   <input type="text" name="start_time" placeholder="hh:mm:ss" >
+		   </div>
+          <input type="submit" value="Submit">
+      </form>
+      </div>
+    </div>
+	
+	<script type="text/javascript">
+function validate()
+{
+if(document.getElementById('chid').checked)
+{
+document.getElementById('id1').style.visibility="hidden";
+}
+else
+{
+document.getElementById('id1').style.visibility="visible";
+}
+}
+</script>
+  </body>
+  
+</html>
